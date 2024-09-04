@@ -18,8 +18,6 @@ services:
     container_name: db
     restart: always
     tty: true
-    volumes:
-      - ./mysql:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=nodedb
       - MYSQL_ROOT_PASSWORD=root
@@ -30,6 +28,7 @@ services:
       interval: 5s
       timeout: 10s
       retries: 3
+
   nginx:
     build:
       context: ./nginx
