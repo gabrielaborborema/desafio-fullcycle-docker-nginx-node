@@ -1,5 +1,5 @@
 FROM node:latest AS build
-WORKDIR /myapp
+WORKDIR /usr/src/app
 COPY . .
 RUN npm install
 
